@@ -1,0 +1,260 @@
+[
+    {
+        "intent": "welcomegreeting",
+        "responses": [
+            "Hello, Welcome to Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik! Kindly choose from one of the following to get started."
+        ]
+    },
+    {
+        "intent": "about_college",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik was established in 2010 with an objective of providing professional education. The institute offers undergraduate courses in Engineering in affiliation with the Savitribai Phule Pune University, Pune. It is approved by AICTE, New Delhi & DTE, Maharashtra."
+        ]
+    },
+    {
+        "intent": "student_strength",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik has 800+ students studying with us across all engineering branches."
+        ]
+    },
+    {
+        "intent": "campus_visit",
+        "responses": [
+            "To visit the Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik campus you can proceed by choosing further below options."
+        ]
+    },
+    {
+        "intent": "address",
+        "responses": [
+            "The address of Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management is: 206-Dindori road, Behind Reliance Petrol Pump, Near MERI, Mhasrul, Nashik - 422004"
+        ]
+    },
+    {
+        "intent": "visit_hours",
+        "responses": [
+            "You can visit Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik between 10 AM to 5 PM from MONDAY to SATURDAY."
+        ]
+    },
+    {
+        "intent": "contact",
+        "responses": [
+            "You can contact Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik on: 0253-6480036, 1800-266-5330, Email us on: pvgcoenashik@gmail.com"
+        ]
+    },
+    {
+        "intent": "course",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik provides below mentioned courses. Please select one to know more."
+        ]
+    },
+    {
+        "intent": "computer_engineering",
+        "responses": [
+            "What do you want to know about Computer engineering at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik? Please choose further to know."
+        ]
+    },
+    {
+        "intent": "computer_intake",
+        "responses": [
+            "Please select one from below options"
+        ]
+    },
+    {
+        "intent": "computer_first",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik has intake of 120 students for Computer Engineering First Year"
+        ]
+    },
+    {
+        "intent": "computer_dsy",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik has intake of 20 students for Computer Engineering DSY [NOTE: Intake number varies every academic year.]"
+        ]
+    },
+    {
+        "intent": "computer_fee",
+        "responses": [
+            "Select a category to know the fee structure at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik"
+        ]
+    },
+    {
+        "intent": "open_fee",
+        "responses": [
+            "Fee for an OPEN category student at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik is: RS 65000 (Excluding university exam fee)"
+        ]
+    },
+    {
+        "intent": "obc_fee",
+        "responses": [
+            "Fee for an OBC category student at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik is: RS 45000 (Excluding university exam fee)"
+        ]
+    },
+    {
+        "intent": "scst_fee",
+        "responses": [
+            "Fee for a SC/ST category student at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik is as per Government norms (Excluding university exam fee)"
+        ]
+    },
+    {
+        "intent": "computer_criteria",
+        "responses": [
+            "The criteria for Computer Engineering at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik are as follows: A minimum aggregate of 50% or equivalent in 10+2. Compulsory Subjects: Physics & Mathematics; and anyone of the following: Chemistry, Computer Science. Minimum passing mark is essential in each of the subject."
+        ]
+    },
+    {
+        "intent": "computer_duration",
+        "responses": [
+            "The duration for the Computer Engineering offered at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik is 4 years."
+        ]
+    },
+    {
+        "intent": "mechanical_engineering",
+        "responses": [
+            "What do you want to know about Mechanical engineering at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik? Please choose further to know."
+        ]
+    },
+    {
+        "intent": "mechanical_intake",
+        "responses": [
+            "Please select one from below options"
+        ]
+    },
+    {
+        "intent": "mechanical_first",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik has intake of 120 students for Mechanical Engineering First Year"
+        ]
+    },
+    {
+        "intent": "mechanical_dsy",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik has intake of 20 students for Mechanical Engineering DSY [NOTE: Intake number varies every academic year.]"
+        ]
+    },
+    {
+        "intent": "mechanical_fee",
+        "responses": [
+            "Select a category to know the fee structure at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik"
+        ]
+    },
+    {
+        "intent": "mechanical_criteria",
+        "responses": [
+            "The criteria for Mechanical Engineering at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik are as follows: A minimum aggregate of 50% or equivalent in 10+2. Compulsory Subjects: Physics & Mathematics; and anyone of the following: Chemistry, Computer Science. Minimum passing mark is essential in each of the subject."
+        ]
+    },
+    {
+        "intent": "mechanical_duration",
+        "responses": [
+            "The duration for the Mechanical Engineering offered at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik is 4 years."
+        ]
+    },
+    {
+        "intent": "electrical_engineering",
+        "responses": [
+            "What do you want to know about Electrical engineering at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik? Please choose further to know."
+        ]
+    },
+    {
+        "intent": "electrical_intake",
+        "responses": [
+            "Please select one from below options"
+        ]
+    },
+    {
+        "intent": "electrical_first",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik has intake of 120 students for Electrical Engineering First Year"
+        ]
+    },
+    {
+        "intent": "electrical_dsy",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik has intake of 20 students for Electrical Engineering DSY [NOTE: Intake number varies every academic year.]"
+        ]
+    },
+    {
+        "intent": "electrical_fee",
+        "responses": [
+            "Select a category to know the fee structure at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik"
+        ]
+    },
+    {
+        "intent": "electrical_criteria",
+        "responses": [
+            "The criteria for Electrical Engineering at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik are as follows: A minimum aggregate of 50% or equivalent in 10+2. Compulsory Subjects: Physics & Mathematics; and anyone of the following: Chemistry, Computer Science. Minimum passing mark is essential in each of the subject."
+        ]
+    },
+    {
+        "intent": "electrical_duration",
+        "responses": [
+            "The duration for the Electrical Engineering offered at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik is 4 years."
+        ]
+    },
+    {
+        "intent": "ai&ds_engineering",
+        "responses": [
+            "What do you want to know about AI&DS (Artificial Intelligence & Data Science) at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik? Please choose further to know."
+        ]
+    },
+    {
+        "intent": "ai&ds_intake",
+        "responses": [
+            "Please select one from below options"
+        ]
+    },
+    {
+        "intent": "ai&ds_first",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik has intake of 60 students for AI&DS First Year"
+        ]
+    },
+    {
+        "intent": "ai&ds_dsy",
+        "responses": [
+            "Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik has intake of 10 students for AI&DS DSY [NOTE: Intake number varies every academic year.]"
+        ]
+    },
+    {
+        "intent": "ai&ds_fee",
+        "responses": [
+            "Select a category to know the fee structure at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik"
+        ]
+    },
+    {
+        "intent": "ai&ds_criteria",
+        "responses": [
+            "The criteria for AI&DS Engineering at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik are as follows: A minimum aggregate of 50% or equivalent in 10+2. Compulsory Subjects: Physics & Mathematics; and anyone of the following: Chemistry, Computer Science. Minimum passing mark is essential in each of the subject."
+        ]
+    },
+    {
+        "intent": "ai&ds_duration",
+        "responses": [
+            "The duration for the AI&DS Engineering offered at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik is 4 years."
+        ]
+    },
+    {
+        "intent": "admission_enquiry",
+        "responses": [
+            "For admission enquiry at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik, please follow the link: https://www.pvgcoenashik.edu.in/admission.php or contact us directly."
+        ]
+    },
+    {
+        "intent": "scholarship",
+        "responses": [
+            "The scholarship is provided to CAP enrolled students only at Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik. College follows the MAHADBT scholarships provided by government of Maharashtra. Click on the link to know more: https://mahadbt.maharashtra.gov.in/"
+        ]
+    },
+    {
+        "intent": "endgreeting",
+        "responses": [
+            "Goodbye! Thank you for visiting Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik. Have a good day. Hope to see you again."
+        ]
+    },
+    {
+        "intent": "thankgreet",
+        "responses": [
+            "It's my pleasure to help you with Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management Nashik information. See you soon."
+        ]
+    }
+]

@@ -1,0 +1,32 @@
+# Core web framework (compatible with TensorFlow 2.12)
+fastapi
+uvicorn[standard]
+
+# Machine Learning and Data Processing (working versions)
+tensorflow
+numpy
+pandas
+scipy
+scikit-learn
+nltk
+# Ensure compatible typing-extensions
+typing-extensions
+
+# Text Processing
+autocorrect
+
+# HTTP and API
+requests
+httpx
+# Utilities
+python-dateutil
+pytz
+tqdm
+# Development and Testing
+pytest
+pytest-asyncio
+
+# Hugging Face Transformers for LLM fallback
+Transformers
+torch
+accelerate
