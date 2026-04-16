@@ -72,6 +72,14 @@
             {
                 "text": "AI&DS",
                 "tag": "ai&ds_engineering"
+            },
+            {
+                "text": "Information Technology",
+                "tag": "it_engineering"
+            },
+            {
+                "text": "E&TC Engineering",
+                "tag": "entc_engineering"
             }
         ]
     },
@@ -328,6 +336,86 @@
             {
                 "text": "Admission",
                 "tag": "admission_enquiry"
+            }
+        ]
+    },
+    {
+        "intent": "it_engineering",
+        "related": [
+            {
+                "text": "Intake",
+                "tag": "it_intake"
+            },
+            {
+                "text": "Fee Structure",
+                "tag": "it_fee"
+            },
+            {
+                "text": "Eligibility Criteria",
+                "tag": "it_criteria"
+            },
+            {
+                "text": "Course Duration",
+                "tag": "it_duration"
+            },
+            {
+                "text": "Admission",
+                "tag": "admission_enquiry"
+            }
+        ]
+    },
+    {
+        "intent": "entc_engineering",
+        "related": [
+            {
+                "text": "Intake",
+                "tag": "entc_intake"
+            },
+            {
+                "text": "Fee Structure",
+                "tag": "entc_fee"
+            },
+            {
+                "text": "Eligibility Criteria",
+                "tag": "entc_criteria"
+            },
+            {
+                "text": "Course Duration",
+                "tag": "entc_duration"
+            },
+            {
+                "text": "Admission",
+                "tag": "admission_enquiry"
+            }
+        ]
+    },
+    {
+        "intent": "faculty_info",
+        "related": [
+            {
+                "text": "Computer Faculty",
+                "tag": "computer_engineering"
+            },
+            {
+                "text": "AI&DS Faculty",
+                "tag": "ai&ds_engineering"
+            },
+            {
+                "text": "Contact",
+                "tag": "contact"
+            }
+        ]
+    },
+    {
+        "intent": "facilities",
+        "related": [
+            {
+                "text": "Laboratories",
+                "tag": "course"
+            },
+            {
+                "text": "Campus Visit",
+                "tag": "campus_visit"
             }
         ]
     }

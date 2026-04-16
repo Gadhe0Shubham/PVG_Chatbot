@@ -1,14 +1,14 @@
-# 🤖 Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management - AI-Powered College Enquiry Chatbot
+# AI Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management - AI-Powered College Enquiry Chatbot
 
-## 📋 Project Overview
+##  Project Overview
 
-### 🎯 **Project Title**
+###  **Project Title**
 **Intelligent College Enquiry Chatbot with LLM Integration**
 
-### 🏛️ **Institution**
+###  **Institution**
 **Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management, Nashik**
 
-### 📅 **Project Details**
+###  **Project Details**
 - **Established**: 2010
 - **Affiliation**: Savitribai Phule Pune University, Pune
 - **Approvals**: AICTE, New Delhi & DTE, Maharashtra
@@ -16,7 +16,7 @@
 
 ---
 
-## 🚀 **Project Objectives**
+## Launch **Project Objectives**
 
 ### **Primary Goals**
 1. **Automate College Enquiries** - Provide instant responses to prospective students
@@ -26,14 +26,14 @@
 5. **Reduce Administrative Load** - Minimize repetitive enquiry handling by staff
 
 ### **Target Audience**
-- 🎓 Prospective students and parents
-- 📚 Current students seeking information
-- 🏢 Educational consultants
-- 🌐 Website visitors
+-  Prospective students and parents
+-  Current students seeking information
+-  Educational consultants
+-  Website visitors
 
 ---
 
-## 🏗️ **System Architecture**
+##  **System Architecture**
 
 ### **Technology Stack**
 
@@ -64,7 +64,7 @@
 
 ---
 
-## 🎯 **Key Features**
+##  **Key Features**
 
 ### **1. Intelligent Query Processing**
 - **Dual Processing System**: 
@@ -108,16 +108,16 @@
 
 ---
 
-## 📊 **Data Architecture**
+##  **Data Architecture**
 
 ### **Knowledge Base Structure**
 ```
-📁 Data Components
-├── 📄 responses.json (45+ intent responses)
-├── 📄 related.json (contextual suggestions)
-├── 📄 intends.json (intent classifications)
-├── 📄 querys.json (training queries)
-└── 🤖 LLM Integration (DialoGPT-small)
+ Data Components
+├──  responses.json (45+ intent responses)
+├──  related.json (contextual suggestions)
+├──  intends.json (intent classifications)
+├──  querys.json (training queries)
+└── AI LLM Integration (DialoGPT-small)
 ```
 
 ### **Intent Categories**
@@ -129,26 +129,26 @@
 
 ---
 
-## 🔧 **Technical Implementation**
+##  **Technical Implementation**
 
 ### **Backend Architecture**
 ```python
 FastAPI Application
-├── 🧠 ML Interpreter (TensorFlow)
-├── 🤖 LLM Fallback (Hugging Face)
-├── 📝 Spelling Correction
-├── 🔍 Intent Detection
-└── 📊 Response Generation
+├──  ML Interpreter (TensorFlow)
+├── AI LLM Fallback (Hugging Face)
+├──  Spelling Correction
+├──  Intent Detection
+└──  Response Generation
 ```
 
 ### **Frontend Architecture**
 ```javascript
 React Application
-├── 💬 Chat Interface
-├── 🎤 Voice Recognition
-├── 🔊 Speech Synthesis
-├── 📱 Responsive Design
-└── 🎨 Modern UI Components
+├──  Chat Interface
+├──  Voice Recognition
+├──  Speech Synthesis
+├──  Responsive Design
+└──  Modern UI Components
 ```
 
 ### **API Endpoints**
@@ -159,7 +159,7 @@ React Application
 
 ---
 
-## 🚀 **Installation & Deployment**
+## Launch **Installation & Deployment**
 
 ### **Quick Setup**
 ```bash
@@ -187,7 +187,7 @@ cd frontend && npm start
 
 ---
 
-## 📈 **Performance Metrics**
+##  **Performance Metrics**
 
 ### **Response Times**
 - **College Queries**: < 200ms
@@ -207,25 +207,25 @@ cd frontend && npm start
 
 ---
 
-## 🎓 **Educational Impact**
+##  **Educational Impact**
 
 ### **Benefits for Students**
 - ⏰ **24/7 Availability**: Get information anytime
-- 🚀 **Instant Responses**: No waiting for office hours
-- 🎯 **Accurate Information**: Curated, up-to-date data
-- 🗣️ **Accessibility**: Voice-enabled for all users
-- 📱 **Mobile-Friendly**: Access from any device
+- Launch **Instant Responses**: No waiting for office hours
+-  **Accurate Information**: Curated, up-to-date data
+-  **Accessibility**: Voice-enabled for all users
+-  **Mobile-Friendly**: Access from any device
 
 ### **Benefits for Institution**
-- 📉 **Reduced Workload**: Automated enquiry handling
-- 📊 **Data Analytics**: Track common queries
-- 💰 **Cost Effective**: Minimal maintenance required
-- 🌟 **Modern Image**: Showcase technological advancement
-- 📈 **Improved Efficiency**: Staff focus on complex tasks
+-  **Reduced Workload**: Automated enquiry handling
+-  **Data Analytics**: Track common queries
+-  **Cost Effective**: Minimal maintenance required
+-  **Modern Image**: Showcase technological advancement
+-  **Improved Efficiency**: Staff focus on complex tasks
 
 ---
 
-## 🔮 **Future Enhancements**
+##  **Future Enhancements**
 
 ### **Planned Features**
 1. **Multi-language Support** (Hindi, Marathi)
@@ -246,7 +246,7 @@ cd frontend && npm start
 
 ---
 
-## 🛠️ **Technical Specifications**
+##  **Technical Specifications**
 
 ### **System Requirements**
 - **Python**: 3.11+
@@ -264,7 +264,7 @@ AI/ML: Hugging Face, PyTorch, scikit-learn
 
 ---
 
-## 📊 **Project Statistics**
+##  **Project Statistics**
 
 ### **Code Metrics**
 - **Total Files**: 50+
@@ -281,24 +281,24 @@ AI/ML: Hugging Face, PyTorch, scikit-learn
 
 ---
 
-## 🏆 **Project Achievements**
+##  **Project Achievements**
 
 ### **Technical Achievements**
-✅ **Successful ML Integration** - Custom intent classification  
-✅ **LLM Implementation** - Hugging Face DialoGPT integration  
-✅ **Voice Features** - Speech recognition and synthesis  
-✅ **Responsive Design** - Cross-platform compatibility  
-✅ **Real-time Processing** - Instant query responses  
+[x] **Successful ML Integration** - Custom intent classification  
+[x] **LLM Implementation** - Hugging Face DialoGPT integration  
+[x] **Voice Features** - Speech recognition and synthesis  
+[x] **Responsive Design** - Cross-platform compatibility  
+[x] **Real-time Processing** - Instant query responses  
 
 ### **Educational Impact**
-✅ **Improved Accessibility** - 24/7 college information  
-✅ **Enhanced User Experience** - Modern, intuitive interface  
-✅ **Reduced Administrative Load** - Automated enquiry handling  
-✅ **Technology Showcase** - Demonstrates institutional innovation  
+[x] **Improved Accessibility** - 24/7 college information  
+[x] **Enhanced User Experience** - Modern, intuitive interface  
+[x] **Reduced Administrative Load** - Automated enquiry handling  
+[x] **Technology Showcase** - Demonstrates institutional innovation  
 
 ---
 
-## 👥 **Team & Acknowledgments**
+##  **Team & Acknowledgments**
 
 ### **Development Team**
 - **Project Lead**: [Your Name]
@@ -313,7 +313,7 @@ AI/ML: Hugging Face, PyTorch, scikit-learn
 
 ---
 
-## 📞 **Contact Information**
+##  **Contact Information**
 
 ### **College Details**
 - **Address**: 206-Dindori road, Behind Reliance Petrol Pump, Near MERI, Mhasrul, Nashik - 422004
@@ -328,7 +328,7 @@ AI/ML: Hugging Face, PyTorch, scikit-learn
 
 ---
 
-## 🎯 **Conclusion**
+##  **Conclusion**
 
 This AI-powered College Enquiry Chatbot represents a significant step forward in educational technology, combining traditional college information systems with modern AI capabilities. The project successfully demonstrates:
 

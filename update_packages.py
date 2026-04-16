@@ -91,13 +91,13 @@ def main():
     frontend_success = update_frontend()
     
     print("\n=== Update Summary ===")
-    print(f"Backend: {'✓ Success' if backend_success else '✗ Failed'}")
-    print(f"Frontend: {'✓ Success' if frontend_success else '✗ Failed'}")
+    print(f"Backend: {'PASS Success' if backend_success else 'FAIL Failed'}")
+    print(f"Frontend: {'PASS Success' if frontend_success else 'FAIL Failed'}")
     
     if backend_success and frontend_success:
-        print("\n🎉 All packages updated successfully!")
+        print("\nSuccess All packages updated successfully!")
     else:
-        print("\n❌ Some updates failed. Please check the errors above.")
+        print("\n[ ] Some updates failed. Please check the errors above.")
 
 if __name__ == "__main__":
     main()

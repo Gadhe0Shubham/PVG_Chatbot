@@ -15,44 +15,44 @@ def test_backend():
         # Test basic imports
         import fastapi
         import uvicorn
-        print("✓ FastAPI and Uvicorn imported successfully")
+        print("PASS FastAPI and Uvicorn imported successfully")
         
         # Test NLTK
         try:
             import nltk
-            print("✓ NLTK imported successfully")
+            print("PASS NLTK imported successfully")
         except ImportError:
-            print("⚠ NLTK not found - install with: pip install nltk")
+            print("WARNING NLTK not found - install with: pip install nltk")
         
         # Test data loading
         sys.path.append(str(Path("backend").absolute()))
         from data import data
-        print("✓ Data files loaded successfully")
+        print("PASS Data files loaded successfully")
         
         # Test TensorFlow (optional - may fail on some systems)
         try:
             import tensorflow as tf
-            print("✓ TensorFlow imported successfully")
+            print("PASS TensorFlow imported successfully")
         except ImportError as e:
-            print(f"⚠ TensorFlow import failed: {e}")
+            print(f"WARNING TensorFlow import failed: {e}")
             print("  This may be due to missing Visual C++ Redistributable on Windows")
             print("  The chatbot may still work if models are pre-trained")
         
         # Test model loading (basic check - may fail if TensorFlow has issues)
         try:
             from models.interpreter import Interpreter
-            print("✓ Interpreter module imported successfully")
+            print("PASS Interpreter module imported successfully")
         except Exception as e:
-            print(f"⚠ Interpreter import failed: {e}")
+            print(f"WARNING Interpreter import failed: {e}")
             print("  This is likely due to TensorFlow issues")
         
         return True
         
     except ImportError as e:
-        print(f"✗ Critical import error: {e}")
+        print(f"FAIL Critical import error: {e}")
         return False
     except Exception as e:
-        print(f"✗ Backend test failed: {e}")
+        print(f"FAIL Backend test failed: {e}")
         return False
 
 def test_frontend():
@@ -61,21 +61,21 @@ def test_frontend():
     
     frontend_dir = Path("frontend")
     if not frontend_dir.exists():
-        print("✗ Frontend directory not found")
+        print("FAIL Frontend directory not found")
         return False
     
     # Check if node_modules exists
     node_modules = frontend_dir / "node_modules"
     if not node_modules.exists():
-        print("✗ node_modules not found. Run 'npm install' in frontend directory")
+        print("FAIL node_modules not found. Run 'npm install' in frontend directory")
         return False
     
-    print("✓ Frontend dependencies appear to be installed")
+    print("PASS Frontend dependencies appear to be installed")
     
     # Check if build directory exists (from previous build)
     build_dir = frontend_dir / "build"
     if build_dir.exists():
-        print("✓ Build directory found - frontend can be built")
+        print("PASS Build directory found - frontend can be built")
     else:
         print("ℹ Build directory not found - run 'npm run build' to test")
     
@@ -103,13 +103,13 @@ def test_files():
         if not Path(file_path).exists():
             missing_files.append(file_path)
         else:
-            print(f"✓ {file_path}")
+            print(f"PASS {file_path}")
     
     if missing_files:
-        print(f"\n✗ Missing files: {missing_files}")
+        print(f"\nFAIL Missing files: {missing_files}")
         return False
     
-    print("✓ All required files found")
+    print("PASS All required files found")
     return True
 
 def main():
@@ -128,18 +128,18 @@ def main():
     
     print("\n" + "="*50)
     print("TEST RESULTS:")
-    print(f"Files: {'✓ PASS' if files_ok else '✗ FAIL'}")
-    print(f"Backend: {'✓ PASS' if backend_ok else '✗ FAIL'}")
-    print(f"Frontend: {'✓ PASS' if frontend_ok else '✗ FAIL'}")
+    print(f"Files: {'PASS PASS' if files_ok else 'FAIL FAIL'}")
+    print(f"Backend: {'PASS PASS' if backend_ok else 'FAIL FAIL'}")
+    print(f"Frontend: {'PASS PASS' if frontend_ok else 'FAIL FAIL'}")
     
     if files_ok and backend_ok and frontend_ok:
-        print("\n🎉 All tests passed! JITBot setup is working correctly.")
+        print("\nSuccess All tests passed! JITBot setup is working correctly.")
         print("\nTo start the application:")
         print("1. Backend: cd backend && python main.py")
         print("2. Frontend: cd frontend && npm start")
         return True
     else:
-        print("\n❌ Some tests failed. Please check the errors above.")
+        print("\n[ ] Some tests failed. Please check the errors above.")
         return False
 
 if __name__ == "__main__":

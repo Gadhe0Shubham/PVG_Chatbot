@@ -1,0 +1,52 @@
+.courses-page-ak {
+  background-color: var(--ak-bg);
+}
+
+.ak-course-card {
+  background: white;
+  border-radius: 40px;
+  border: 1px solid rgba(0,0,0,0.03);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ak-course-card:hover {
+  border-color: rgba(0,0,0,0.1);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+}
+
+.ak-icon-box {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.ak-btn-primary {
+  background: black;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.ak-btn-primary:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .ak-course-card .flex {
+    flex-direction: column;
+    padding: 30px;
+  }
+  
+  .ak-icon-box {
+    margin-bottom: 20px;
+  }
+}

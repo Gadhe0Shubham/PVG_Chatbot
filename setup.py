@@ -90,16 +90,16 @@ def main():
     frontend_success = setup_frontend()
     
     print("\n=== Setup Summary ===")
-    print(f"Backend: {'✓ Success' if backend_success else '✗ Failed'}")
-    print(f"Frontend: {'✓ Success' if frontend_success else '✗ Failed'}")
+    print(f"Backend: {'PASS Success' if backend_success else 'FAIL Failed'}")
+    print(f"Frontend: {'PASS Success' if frontend_success else 'FAIL Failed'}")
     
     if backend_success and frontend_success:
-        print("\n🎉 Setup completed successfully!")
+        print("\nSuccess Setup completed successfully!")
         print("\nTo start the application:")
         print("1. Backend: cd backend && python main.py")
         print("2. Frontend: cd frontend && npm start")
     else:
-        print("\n❌ Setup failed. Please check the errors above.")
+        print("\n[ ] Setup failed. Please check the errors above.")
         sys.exit(1)
 
 if __name__ == "__main__":

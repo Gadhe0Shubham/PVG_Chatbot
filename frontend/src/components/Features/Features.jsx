@@ -1,163 +1,80 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faLaptopCode, 
-  faCogs, 
-  faBolt, 
-  faRobot,
-  faServer,
-  faChartLine,
-  faUserGraduate,
-  faBuilding,
-  faPhone,
-  faCalendarAlt
-} from '@fortawesome/free-solid-svg-icons';
+import {
+  Laptop2,
+  Bot,
+  Database,
+  Cog,
+  ChartNoAxesCombined,
+  RadioTower,
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Features.css';
 
 const Features = () => {
-  const courses = [
-    {
-      icon: faLaptopCode,
-      title: "Computer Engineering",
-      description: "Programming, Software Development & Modern Technology",
-      seats: "120 FE + 20 DSY",
-      color: "#667eea",
-      type: "UG"
-    },
-    {
-      icon: faServer,
-      title: "IT Engineering",
-      description: "Information Technology, Networks & System Administration",
-      seats: "120 FE + 20 DSY",
-      color: "#4ecdc4",
-      type: "UG"
-    },
-    {
-      icon: faCogs,
-      title: "Mechanical Engineering", 
-      description: "Design, Manufacturing & Mechanical Systems",
-      seats: "120 FE + 20 DSY",
-      color: "#764ba2",
-      type: "UG"
-    },
-    {
-      icon: faBolt,
-      title: "E&TC Engineering",
-      description: "Electronics & Telecommunication Technology",
-      seats: "120 FE + 20 DSY", 
-      color: "#ffd700",
-      type: "UG"
-    },
-    {
-      icon: faRobot,
-      title: "AI & Data Science",
-      description: "AI, Machine Learning & Data Analytics",
-      seats: "60 FE + 10 DSY",
-      color: "#ff6b6b",
-      type: "UG"
-    },
-    {
-      icon: faChartLine,
-      title: "MBA",
-      description: "Master of Business Administration (SSDIOM)",
-      seats: "60 Students",
-      color: "#9b59b6",
-      type: "PG"
-    }
+  const departments = [
+    { icon: Laptop2,             title: "Computer Engineering", seats: "120", color: "#4EBD5E", bg: "rgba(78,189,94,0.1)", slug: "computer-engineering" },
+    { icon: Bot,                 title: "AI & Data Science",    seats: "60",  color: "#2369FF", bg: "rgba(35,105,255,0.1)", slug: "ai-ds-engineering" },
+    { icon: Database,            title: "IT Engineering",        seats: "120", color: "#F59E0B", bg: "rgba(245,158,11,0.1)", slug: "it-engineering" },
+    { icon: RadioTower,          title: "E&TC Engineering",      seats: "120", color: "#D97706", bg: "rgba(217,119,6,0.12)", slug: "entc-engineering" },
+    { icon: Cog,                 title: "Mechanical Engg.",      seats: "120", color: "#EF4444", bg: "rgba(239,68,68,0.1)", slug: "mechanical-engineering" },
+    { icon: ChartNoAxesCombined, title: "MBA Programs",          seats: "60",  color: "#8B5CF6", bg: "rgba(139,92,246,0.1)", slug: "mba" },
   ];
 
-  const quickInfo = [
-    {
-      icon: faUserGraduate,
-      title: "800+ Students",
-      description: "Diverse student community"
-    },
-    {
-      icon: faBuilding,
-      title: "Modern Campus",
-      description: "State-of-the-art facilities"
-    },
-    {
-      icon: faPhone,
-      title: "24/7 Support",
-      description: "Student assistance available"
-    },
-    {
-      icon: faCalendarAlt,
-      title: "Since 2010",
-      description: "13+ years of excellence"
-    }
+  const stats = [
+    { value: "800+", label: "Students Enrolled" },
+    { value: "95%",  label: "Placement Rate" },
+    { value: "50+",  label: "Industry Partners" },
+    { value: "13+",  label: "Years Legacy" },
   ];
 
   return (
     <section className="features-section">
       <div className="features-container">
-        {/* Courses Section */}
-        <div className="section-header">
-          <h2 className="section-title">Academic Programs</h2>
+
+        {/* Department Row */}
+        <div className="text-center mb-6">
+          <h2 className="section-title">Our Departments</h2>
           <p className="section-subtitle">
-            PVGCOE offers 5 UG Engineering courses & SSDIOM offers MBA program with industry-focused curriculum
+            5 undergraduate engineering programs at PVGCOE and 1 MBA program at SSDIOM.
           </p>
         </div>
 
-        <div className="courses-grid">
-          {courses.map((course, index) => (
-            <div key={index} className="course-card" style={{'--accent-color': course.color}}>
-              <div className="course-header">
-                <div className="course-icon">
-                  <FontAwesomeIcon icon={course.icon} />
-                </div>
-                <span className="course-type">{course.type}</span>
+        <div className="dept-row">
+          {departments.map((d, i) => (
+            <Link to={`/programs/${d.slug}`} key={i} className="dept-chip">
+              <span className="dept-chip-icon" style={{ backgroundColor: d.bg, color: d.color }}>
+                <d.icon size={18} strokeWidth={2.2} />
+              </span>
+              <div className="dept-chip-text">
+                <span className="dept-chip-name">{d.title}</span>
+                <span className="dept-chip-seats">{d.seats} Seats</span>
               </div>
-              <h3 className="course-title">{course.title}</h3>
-              <p className="course-description">{course.description}</p>
-              <div className="course-seats">
-                <span className="seats-label">Available Seats:</span>
-                <span className="seats-count">{course.seats}</span>
-              </div>
-              <button className="course-btn">Learn More</button>
+            </Link>
+          ))}
+        </div>
+
+        {/* Stats Strip */}
+        <div className="stats-strip">
+          {stats.map((s, i) => (
+            <div key={i} className="stat-block">
+              <span className="stat-value">{s.value}</span>
+              <span className="stat-label">{s.label}</span>
             </div>
           ))}
         </div>
 
-        {/* Quick Info Section */}
-        <div className="quick-info-section">
-          <h3 className="quick-info-title">Why Choose PVGCOE & SSDIOM?</h3>
-          <div className="quick-info-grid">
-            {quickInfo.map((info, index) => (
-              <div key={index} className="info-card">
-                <FontAwesomeIcon icon={info.icon} className="info-icon" />
-                <h4 className="info-title">{info.title}</h4>
-                <p className="info-description">{info.description}</p>
-              </div>
-            ))}
+        {/* CTA Banner */}
+        <div className="cta-banner">
+          <div className="cta-text">
+            <h3>Ready to begin your journey?</h3>
+            <p>Apply now through the official admission process. Our admissions team is here to guide you every step of the way.</p>
+          </div>
+          <div className="cta-actions">
+            <Link to="/admissions" className="cta-btn-primary">Apply Now</Link>
+            <Link to="/contact" className="cta-btn-secondary">Talk to us</Link>
           </div>
         </div>
 
-        {/* Contact Info */}
-        <div className="contact-info-section">
-          <div className="contact-card">
-            <h3>Get in Touch</h3>
-            <div className="contact-details">
-              <div className="contact-item">
-                <strong>Address:</strong>
-                <p>206-Dindori road, Behind Reliance Petrol Pump, Near MERI, Mhasrul, Nashik - 422004</p>
-              </div>
-              <div className="contact-item">
-                <strong>Phone:</strong>
-                <p>0253-6480036, 1800-266-5330</p>
-              </div>
-              <div className="contact-item">
-                <strong>Email:</strong>
-                <p>pvgcoenashik@gmail.com</p>
-              </div>
-              <div className="contact-item">
-                <strong>Visit Hours:</strong>
-                <p>10 AM to 5 PM (Monday to Saturday)</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

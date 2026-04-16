@@ -25,10 +25,11 @@ class Interpreter:
     @staticmethod
     def load_interpreter(name: str = "default_stem"):
         interpreter = Interpreter()
-        _file = open(f"models/saved/{name}.json", "r")
-        saved_model = json.load(_file)
+        with open(f"models/saved/{name}.json", "r") as _file:
+            saved_model = json.load(_file)
         interpreter.s2v = SequenceToVector.from_json(saved_model["s2v"])
         interpreter.v2c = VectorToClass.from_json(saved_model["v2c"])
         return interpreter
+
 
         

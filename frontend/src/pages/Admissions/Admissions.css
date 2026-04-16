@@ -1,0 +1,51 @@
+.admissions-page-ak {
+  background-color: var(--ak-bg);
+}
+
+.ak-admission-card {
+  background: white;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+
+.ak-admission-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.ak-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ak-timeline-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.ak-timeline-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+}
+
+.ak-cta-banner {
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .ak-cta-banner {
+    padding: 30px;
+    border-radius: 40px;
+  }
+}

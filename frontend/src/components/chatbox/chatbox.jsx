@@ -5,6 +5,8 @@ import {
   faXmark,
   faMicrophone,
   faPaperPlane,
+  faExpand,
+  faCompress
 } from "@fortawesome/free-solid-svg-icons";
 import { useSpeechRecognition, useSpeechSynthesis } from "../../hooks/useSpeech";
 import ChatApi from "../../api/chatApi";
@@ -13,12 +15,12 @@ import LoadingDots from "../LoadingDots/LoadingDots";
 
 export default function ChatBox(props) {
   const [chatBoxValue, setChatBoxValue] = useState("");
-  const [micActive, setMicActive] = useState(false);
   const locked = useRef(false);
   const inputRef = useRef(null);
   const divRef = useRef(null)
   const [chats, setChats] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isMaximized, setIsMaximized] = useState(false);
 
   const { listen, listening, stop, supported } = useSpeechRecognition({
     onResult: (result) => {
@@ -26,7 +28,7 @@ export default function ChatBox(props) {
     },
   });
 
-  const { speak } = useSpeechSynthesis();
+  useSpeechSynthesis();
 
   // Function to scroll to bottom smoothly
   const scrollToBottom = () => {
@@ -46,9 +48,6 @@ export default function ChatBox(props) {
         related: related,
       },
     ]);
-    if (micActive && created_by === "server") {
-      speak({ text: message });
-    }
     // Scroll to bottom after adding new message
     scrollToBottom();
   }
@@ -97,44 +96,50 @@ export default function ChatBox(props) {
 
   return (
     <div
-      className="chat-box-container flex flex-col"
+      className={`chat-box-container flex flex-col ${isMaximized ? 'is-maximized' : ''}`}
       style={{
-        height: props.isActive ? "550px" : 0,
-        width: props.isActive ? "400px" : 0,
+        height: props.isActive ? (isMaximized ? "calc(100dvh - 24px)" : "min(620px, calc(100dvh - 120px))") : 0,
+        width: props.isActive ? (isMaximized ? "calc(100dvw - 24px)" : "min(420px, calc(100dvw - 24px))") : 0,
+        maxWidth: props.isActive ? (isMaximized ? "calc(100dvw - 24px)" : "min(420px, calc(100dvw - 24px))") : 0,
         opacity: props.isActive ? 1 : 0,
         position: 'fixed',
-        bottom: '120px',
-        right: '30px',
-        zIndex: 1000,
+        bottom: props.isActive ? (isMaximized ? "12px" : "96px") : 0,
+        right: props.isActive ? "12px" : 0,
+        left: props.isActive && isMaximized ? "12px" : "auto",
+        top: props.isActive && isMaximized ? "12px" : "auto",
+        zIndex: 2000,
+        transition: 'all 0.3s ease-in-out',
+        borderRadius: isMaximized ? '18px' : '20px',
       }}
     >
-      <div className="chat-box-top bg-gradient-to-r from-purple-600 to-blue-600 h-14 w-full text-white flex items-center px-4">
-        <img src="/logo.png" alt="College Logo" className="chatbox-logo" />
-        <div className="chatbox-title-section">
-          <h6 className="font-bold text-xs leading-tight">PVGCOE & SSDIOM</h6>
-          <p className="text-xs opacity-80 leading-tight">AI Assistant</p>
+
+      <div className="chat-box-top bg-black h-14 w-full text-white flex items-center px-4">
+        <div className="chatbox-logo-ak">
+           <img src="/logo.png" alt="PVGCOE Logo" className="chatbox-logo-image" />
+        </div>
+        <div className="chatbox-title-section-ak">
+          <h6 className="font-bold text-sm leading-tight">PVGCOE & SSDIOM AI</h6>
+          <p className="text-[10px] opacity-60 leading-tight uppercase font-bold tracking-widest">College Assistant</p>
         </div>
         <span className="flex-1" />
+        
         <button
-          className="speach-btn hover:scale-125 m-5"
-          style={{
-            color: micActive ? "green" : "white",
-          }}
-          onClick={() => {
-            setMicActive(!micActive);
-          }}
+          className="hover:opacity-70 transition-opacity mr-4"
+          onClick={() => setIsMaximized(!isMaximized)}
+          title={isMaximized ? "Minimize" : "Maximize"}
         >
-          <FontAwesomeIcon
-            className="text-xl speach-btn-icon"
-            icon={faMicrophone}
-          />
+          <FontAwesomeIcon className="text-xl" icon={isMaximized ? faCompress : faExpand} />
         </button>
         <button
-          className="hover:text-red-400 hover:scale-125"
-          onClick={() => props.toggle()}
+          className="hover:text-red-400 transition-colors"
+          onClick={() => {
+            setIsMaximized(false);
+            props.toggle();
+          }}
         >
           <FontAwesomeIcon className="text-xl" icon={faXmark} />
         </button>
+
       </div>
       <div className="chat-box-middle flex-1" ref={divRef}>
         <div className="chat-messages-container">
@@ -156,7 +161,7 @@ export default function ChatBox(props) {
           {isLoading && <LoadingDots />}
         </div>
       </div>
-      <div className="chat-box-bottom bg-gradient-to-r from-purple-600 to-blue-600 h-16 w-full flex items-center justify-center p-3">
+      <div className="chat-box-bottom bg-black h-16 w-full flex items-center justify-center p-3">
         <input
           type="text"
           className="text-sm"

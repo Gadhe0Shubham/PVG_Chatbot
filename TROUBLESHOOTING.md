@@ -104,8 +104,8 @@ The frontend now includes console.log statements to help debug:
 4. Frontend displays response in chat
 
 ### **Current Status:**
-✅ **Tag buttons working** - Direct intent access works
-❌ **Textbox queries failing** - Query processing needs backend running
+[x] **Tag buttons working** - Direct intent access works
+[ ] **Textbox queries failing** - Query processing needs backend running
 
 ### **Quick Test:**
 1. Start backend: `cd backend && python simple_server.py`

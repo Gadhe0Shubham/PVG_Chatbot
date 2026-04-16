@@ -1,25 +1,163 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body {
-    font-family: 'Poppins', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Akademia Design System */
+  --ak-bg: #F2F1EF;
+  --ak-black: #000000;
+  --ak-green: #4EBD5E;
+  --ak-yellow: #EAF27C;
+  --ak-blue: #2369FF;
+  --ak-text-muted: #555555;
+  
+  --ak-radius-pill: 9999px;
+  --ak-radius-card: 40px;
+  
+  /* Shared Material-ish tokens for backward compatibility if needed */
+  --md-sys-color-primary: var(--ak-black);
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-surface: var(--ak-bg);
+  --md-sys-color-on-surface: var(--ak-black);
 }
-/* E
-nsure proper viewport and positioning */
-html, body {
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
   padding: 0;
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  background-color: var(--ak-bg);
+  color: var(--ak-black);
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
+}
+
+/* Texture Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Akademia Utilities */
+.pill-container {
+  border-radius: var(--ak-radius-pill);
+  overflow: hidden;
+}
+
+.ak-card {
+  background: var(--ak-black);
+  color: white;
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.ak-btn-primary {
+  background: var(--ak-black);
+  color: white;
+  padding: 12px 32px;
+  border-radius: var(--ak-radius-pill);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: 1px solid var(--ak-black);
+}
+
+.ak-btn-primary:hover {
+  background: white;
+  color: var(--ak-black);
+}
+
+.ak-btn-outline {
+  background: transparent;
+  color: var(--ak-black);
+  padding: 12px 32px;
+  border-radius: var(--ak-radius-pill);
+  font-weight: 500;
+  border: 1.5px solid var(--ak-black);
+  transition: all 0.2s ease;
+}
+
+.ak-btn-outline:hover {
+  background: var(--ak-black);
+  color: white;
 }
 
 #root {
   position: relative;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Ensure fixed elements work properly */
-* {
-  box-sizing: border-box;
+/* Premium Typography Helper */
+.h1-premium {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.h2-premium {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--md-sys-color-on-surface);
+}
+
+/* Global Glassmorphism */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+}
+
+/* Custom Buttons */
+.btn-primary-m3 {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--elevation-1);
+}
+
+.btn-primary-m3:hover {
+  box-shadow: var(--elevation-2);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

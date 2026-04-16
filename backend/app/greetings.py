@@ -4,13 +4,19 @@ import pytz
 
 def get_user_timezone():
     try:
-        response = requests.get('https://ipapi.co/timezone/')
-        return response.text.strip()
-    except requests.exceptions.RequestException:
-        return None
+        response = requests.get('https://ipapi.co/timezone/', timeout=5)
+        if response.status_code == 200:
+            tz = response.text.strip()
+            # Basic check to ensure it's not a JSON error message
+            if tz and '{' not in tz and '/' in tz:
+                return tz
+        return "Asia/Kolkata" # Fallback to college location
+    except Exception:
+        return "Asia/Kolkata"
 
 def get_updated_string(original_string: str):
     user_timezone = get_user_timezone()
+
 
     if user_timezone:
         current_time = datetime.now(pytz.timezone(user_timezone)).time()

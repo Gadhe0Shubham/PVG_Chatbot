@@ -1,119 +1,90 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faPhone, 
-  faEnvelope, 
-  faMapMarkerAlt, 
-  faClock,
-  faGraduationCap,
-  faHeart
+import {
+  faPhone, faEnvelope, faMapMarkerAlt, faHeart, faArrowRight
 } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faLinkedin, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="college-footer">
-      <div className="footer-container">
-        <div className="footer-content">
-          <div className="footer-section">
-            <div className="footer-logo-section">
-              <img src="/logo.png" alt="PVGCOE & SSDIOM Logo" className="footer-logo" />
-              <h3 className="footer-title">PVGCOE & SSDIOM</h3>
-              <p className="footer-subtitle">
-                Pune Vidyarthi Griha's College of Engineering & 
-                SS Dhamankar Institute of Management
-              </p>
+    <footer className="footer-ak">
+      <div className="footer-cta-strip">
+        <div className="container footer-cta-inner">
+          <div>
+            <h3 className="text-3xl font-black">Still have questions?</h3>
+            <p className="text-white/60 font-medium mt-2">Our college assistant is available 24/7 to help you.</p>
+          </div>
+          <Link to="/contact" className="footer-cta-btn">
+            Contact Us <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+          </Link>
+        </div>
+      </div>
+
+      <div className="container footer-main">
+        <div className="footer-grid">
+          <div className="footer-col footer-brand-col">
+            <h2 className="footer-logo-text">PVGCOE & SSDIOM</h2>
+            <p className="footer-desc">
+              Pune Vidyarthi Griha's College of Engineering & SS Dhamankar Institute of Management, Nashik.
+              Established in 2010 with a focus on quality professional education.
+            </p>
+            <div className="footer-socials">
+              <a href="https://www.pvgcoenashik.edu.in/" aria-label="Website" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
+              <a href="https://www.pvgcoenashik.edu.in/" aria-label="Website" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
+              <a href="https://www.pvgcoenashik.edu.in/" aria-label="Website" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
+              <a href="https://www.pvgcoenashik.edu.in/" aria-label="Website" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faYoutube} /></a>
             </div>
           </div>
 
-          <div className="footer-section">
-            <h4 className="section-title">Quick Links</h4>
+          <div className="footer-col">
+            <h4 className="footer-heading">Navigation</h4>
             <ul className="footer-links">
-              <li><a href="#about">About College</a></li>
-              <li><a href="#courses">Engineering Programs</a></li>
-              <li><a href="#admissions">Admissions</a></li>
-              <li><a href="#facilities">Facilities</a></li>
-              <li><a href="#placements">Placements</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/courses">Programs</Link></li>
+              <li><Link to="/admissions">Admissions</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 
-          <div className="footer-section">
-            <h4 className="section-title">Academic Programs</h4>
-            <ul className="footer-links">
-              <li>
-                <FontAwesomeIcon icon={faGraduationCap} className="link-icon" />
-                Computer Engineering (UG)
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faGraduationCap} className="link-icon" />
-                IT Engineering (UG)
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faGraduationCap} className="link-icon" />
-                Mechanical Engineering (UG)
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faGraduationCap} className="link-icon" />
-                E&TC Engineering (UG)
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faGraduationCap} className="link-icon" />
-                AI & Data Science (UG)
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faGraduationCap} className="link-icon" />
-                MBA (PG)
-              </li>
+          <div className="footer-col">
+            <h4 className="footer-heading">Departments</h4>
+            <ul className="footer-links muted">
+              <li>Computer Engineering</li>
+              <li>IT Engineering</li>
+              <li>AI & Data Science</li>
+              <li>E&TC Engineering</li>
+              <li>Mechanical Engineering</li>
+              <li>MBA (SSDIOM Nashik)</li>
             </ul>
           </div>
 
-          <div className="footer-section">
-            <h4 className="section-title">Contact Information</h4>
-            <div className="contact-info">
-              <div className="contact-item">
-                <FontAwesomeIcon icon={faMapMarkerAlt} className="contact-icon" />
-                <div>
-                  <p>206-Dindori road, Behind Reliance Petrol Pump</p>
-                  <p>Near MERI, Mhasrul, Nashik - 422004</p>
-                </div>
+          <div className="footer-col">
+            <h4 className="footer-heading">Get In Touch</h4>
+            <div className="footer-contact-list">
+              <div className="footer-contact-item">
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="footer-contact-icon" />
+                <span>206-Dindori Road, Behind Reliance Petrol Pump, Near MERI, Mhasrul, Nashik - 422004</span>
               </div>
-              
-              <div className="contact-item">
-                <FontAwesomeIcon icon={faPhone} className="contact-icon" />
-                <div>
-                  <p>0253-6480036</p>
-                  <p>1800-266-5330</p>
-                </div>
+              <div className="footer-contact-item">
+                <FontAwesomeIcon icon={faPhone} className="footer-contact-icon" />
+                <span>0253-6480036, 1800-266-5330</span>
               </div>
-              
-              <div className="contact-item">
-                <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
-                <div>
-                  <p>pvgcoenashik@gmail.com</p>
-                </div>
-              </div>
-              
-              <div className="contact-item">
-                <FontAwesomeIcon icon={faClock} className="contact-icon" />
-                <div>
-                  <p>Visit Hours: 10 AM to 5 PM</p>
-                  <p>Monday to Saturday</p>
-                </div>
+              <div className="footer-contact-item">
+                <FontAwesomeIcon icon={faEnvelope} className="footer-contact-icon" />
+                <span>pvgcoenashik@gmail.com</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <p className="copyright">
-              © {new Date().getFullYear()} PVGCOE & SSDIOM Nashik. All rights reserved.
-            </p>
-            <p className="made-with">
-              Made with <FontAwesomeIcon icon={faHeart} className="heart-icon" /> for students
-            </p>
-          </div>
+          <p>© {new Date().getFullYear()} PVGCOE & SSDIOM Nashik. All rights reserved.</p>
+          <p className="footer-made">
+            Built with <FontAwesomeIcon icon={faHeart} className="text-[#4EBD5E] mx-1" /> for student guidance
+          </p>
         </div>
       </div>
     </footer>

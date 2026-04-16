@@ -1,0 +1,81 @@
+.contact-page-ak {
+  background-color: var(--ak-bg);
+  margin: 40px;
+  margin-top: 0px;
+}
+
+.ak-contact-card {
+  background: white;
+  padding: 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+
+.ak-contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.ak-form-card {
+  border-radius: 60px;
+}
+
+.ak-input {
+  width: 100%;
+  padding: 18px 24px;
+  border-radius: 20px;
+  border: 1.5px solid rgba(0,0,0,0.05);
+  background: #fbfbfb;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.ak-input:focus {
+  background: white;
+  border-color: var(--ak-black);
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.02);
+}
+
+.ak-map-container {
+  border-radius: 60px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .ak-form-card {
+    padding: 30px;
+    border-radius: 40px;
+  }
+}
+
+/* Toast Notifications */
+.ak-toast {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 28px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  max-width: 90vw;
+}
+
+.ak-toast-success {
+  background: rgba(22, 163, 74, 0.95);
+  color: white;
+}
+
+.ak-toast-error {
+  background: rgba(220, 38, 38, 0.95);
+  color: white;
+}

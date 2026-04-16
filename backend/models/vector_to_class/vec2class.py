@@ -20,7 +20,7 @@ class VectorToClass:
         self.classes.append("no_indent")
         self.setup_config()
         self.create_model()
-        train_x, train_y = self.generate_traning_data(s2v)
+        train_x, train_y = self.generate_training_data(s2v)
         self.model.fit(train_x, train_y, self.batch_size, self.epochs, verbose=2)
     
     def setup_config(self):
@@ -31,7 +31,7 @@ class VectorToClass:
         self.batch_size = this_config["batch_size"]
 
     def create_model(self):
-        network: list = config.config_file["vector_to_class"]["netowrk"]
+        network: list = config.config_file["vector_to_class"]["network"]
         self.model = Sequential(name="Vector_to_Class")
         first_layer = network.pop(0)
         self.model.add(Dense(first_layer["neurons"], first_layer["activation"], input_shape=(self.embedding,)))
@@ -44,7 +44,7 @@ class VectorToClass:
         self.model.add(Dense(len(self.classes), "softmax"))
         self.model.compile(optimizer=Adam(self.learning_rate), loss="categorical_crossentropy", metrics=["accuracy"])
 
-    def generate_traning_data(self, s2v: SequenceToVector):
+    def generate_training_data(self, s2v: SequenceToVector):
         train_x = []
         train_y = []
         querys = utils.get_query_with_intends()
